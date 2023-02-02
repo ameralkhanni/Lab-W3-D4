@@ -1,25 +1,28 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { Routes ,Route} from 'react-router-dom'
+
 import Nav from './comp/Nav'
-import Home from './comp/Home'
-import Blog from './comp/Blog'
-import Blog2 from './comp/Blog2'
-import Blog3 from './comp/Blog3'
-import Blog4 from './comp/Blog4'
-import Footer from './comp/Footer'
+
+import About from './comp/About'
+import HomePage from './comp/HomePage'
 
 function App() {
 
   return (
     <div className="App">
       <Nav/>
-      <Home/>
-      <Blog/>
-      <Blog2/>
-      <Blog3/>
-      <Blog4/>
-      <Footer/>
+    
+
+
+      <Routes>
+      <Route path="/"element={<HomePage/>}> </Route>
+
+
+        <Route path="/information"element={<About/>}> </Route>
+
+      </Routes>
 
 
 

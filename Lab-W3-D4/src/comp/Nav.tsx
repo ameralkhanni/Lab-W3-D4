@@ -1,4 +1,6 @@
 import React from "react";
+import { Link} from 'react-router-dom'
+
 
 import {
   chakra,
@@ -54,10 +56,16 @@ export default function Nav(){
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button variant="ghost">Home</Button>
+              
+              <Link to="/"><Button variant="ghost">Home </Button> </Link>
+
               <Button variant="ghost">Technology News</Button>
               <Button variant="ghost">Educational</Button>
-              <Button variant="ghost">About us</Button>
+
+
+                <Link to="/information"> <Button variant="ghost"> About Us</Button></Link>
+
+              
               <Button variant="ghost">Sign in</Button>
             </HStack>
             <Button colorScheme="brand" size="sm">
@@ -108,7 +116,7 @@ export default function Nav(){
                   About us
                 </Button>
                 <Button w="full" variant="ghost">
-                  Sign in
+                  Contact
                 </Button>
               </VStack>
             </Box>
